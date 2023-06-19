@@ -1,0 +1,61 @@
+
+@use "variables" as *;
+@use "header" ;
+@use "AboutSection" ;
+@use "navbar" ;
+@use "InformationComponent" ;
+@use "ProjectsComponent" ;
+
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size);
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-family-app);
+  font-weight: var(--font-weight);
+
+  background: hsl(224, 32%, 12%);
+  background-image: linear-gradient(70deg, var(--linear-gradient-background));
+  background-blend-mode: multiply;
+
+  color: var(--text-color);
+  scroll-snap-type: y proximity;
+}
+
+.main-portfolio-container {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mouse-pointer-one,
+.mouse-pointer-two {
+  position: fixed;
+  height: .5rem;
+  z-index: 1000;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  border: 1px solid #ccc5;
+  transition: top 80ms ease, left 80ms ease;
+
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.mouse-pointer-two {
+  height: 4rem;
+  transition: top 100ms ease, left 100ms ease;
+}

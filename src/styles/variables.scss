@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merienda&family=Poppins:wght@300&display=swap');
+
+:root {
+
+  /* _____ Fonts _____ */
+  --font-size: 16px;
+  --font-weight: 500;
+  --font-bold: 700;
+  --font-soft: 200;
+  --font-family-name: 'Merienda', cursive;
+  --font-family-text: 'Poppins', sans-serif;
+  --font-family-title: 'Lora', serif;
+
+  
+  /* _____ Colors _____ */
+  --dark-background-color: hsl(235, 21%, 11%);
+  --light-background-color: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 80%);
+
+  --linear-gradient-background:  blue, purple;
+  
+
+  --primary-background-color: #25273c;
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* _____ Variables _____ */
+  --app-width: 75rem;
+
+}

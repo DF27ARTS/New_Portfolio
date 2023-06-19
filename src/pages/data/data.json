@@ -1,0 +1,143 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Synnet",
+      "description": [
+        "The tennis tournament application is a platform that enables users to create and participate in various tennis tournaments. The application is designed to be user-friendly, with easy navigation and a clean interface that allows users to find the information they need quickly and easily.",
+        "One of the standout features of the application is its gallery, which showcases images from the different tournaments. Users can browse through the gallery to see highlights from past tournaments and get a feel for the atmosphere of each event.",
+        "To enable payment for tournaments, the application includes a payment method that accepts credit cards and other payment options. Users can log in and register for tournaments using their social media accounts or by creating a new account within the application.",
+        "The application also includes a section for sponsors, where businesses can advertise their products and services to the tennis community. This section provides an opportunity for companies to reach a targeted audience of tennis players and fans.",
+        "Finally, the application features a ChatBot that guides users through the process of registration and payment for subtournaments. The ChatBot is designed to be user-friendly and easy to use, providing clear instructions and helpful tips to ensure that users can easily navigate the application and register for tournaments without any issues."
+      ],
+      "images": [
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138632/synnet_image1_q129k7.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138647/synnet_image2_asuntn.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138662/synnet_image3_sp0pjy.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138672/synnet_image4_uc0her.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138683/synnet_image5_fskqjf.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138828/synnet_image6_lf2wfl.png"
+      ],
+      "technologies": [
+        "ReactJS",
+        "ReduxJS",
+        "JavaScript",
+        "NodeJS",
+        "ExpressJS",
+        "Sequelize",
+        "PostgreSQL",
+        "React-Chatbot-kit",
+        "HTML",
+        "CSS",
+        "Cloudinary",
+        "Bootstrap",
+        "react-stripe-checkout",
+        "react-toastify",
+        "sweetalert2",
+        "tournament-generator",
+        "bcrypt",
+        "passport-google-oauth20",
+        "stripe"
+      ],
+      "video": null,
+      "github_url": "https://github.com/Nicrosi/Proyecto-Final",
+      "live_url": "https://henry-pi-dogs-d26rn64ql-df27arts.vercel.app"
+    },
+    {
+      "id": 2,
+      "name": "Dog App",
+      "description": [
+        "Browse and learn about different types of dogs: The main function of the application is to allow users to browse and learn about various breeds of dogs. The app should have a comprehensive list of dog breeds that users can browse through and view relevant information about each breed, such as breed characteristics, temperament etc...",
+        "Sort dog breeds by name in ascending and descending order: This feature allows users to sort the list of dog breeds in alphabetical order or reverse alphabetical order, making it easier to find specific breeds.",
+        "Sort Sort dog breeds by weight: This feature allows users to sort the list of dog breeds by weight, allowing them to find breeds that meet specific weight criteria.",
+        "Search engine to find dogs by name: This feature allows users to search for a specific breed of dog by name, making it easy to find information about a particular breed.",
+        "Favorites section to save favorite dog breeds: The app should allow users to save their favorite dog breeds to a favorites section, making it easy for them to access information about those breeds in the future.",
+        "Form to create custom dog breeds: This feature allows users to create custom dog breeds by filling out a form with the relevant information about the breed, such as breed name, characteristics, and temperament. This feature is useful for users who may have a mixed-breed dog or want to create a hypothetical breed for fun."
+      ],
+      "images": [
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139032/app_dogs1_hvucrk.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139059/app_dogs2_uskw5r.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139086/app_dogs3_x6kgjo.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139096/app_dogs4_rimj5e.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139094/app_dogs5_ykcvxx.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139668/app_dogs6_mf1gmr.webp"
+      ],
+      "technologies": [
+        "ReactJS",
+        "ReduxJS",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "NodeJS",
+        "ExpressJS",
+        "SequelizeJS",
+        "PostgreSQL",
+        "Cloudinary"
+      ],
+      "video": null,
+      "github_url": "https://github.com/DF27ARTS/Henry-PI-Dogs",
+      "live_url": "https://henry-pi-dogs-d26rn64ql-df27arts.vercel.app"
+    },
+    {
+      "id": 3,
+      "name": "Job Hunter",
+      "description": [
+        "The webpage is designed to help job seekers keep track of all their job applications in one place. The homepage displays a list of all the applications submitted, including information such as the job title, company name, date submitted, and the application status. Users can filter and search the list based on different criteria, such as application status or company name.",
+        "To use the webpage, users need to create an account by registering with their email address and creating a password. Once they've created an account, they can log in and access all the features of the webpage.",
+        "Overall, this webpage is a valuable tool for anyone who is looking for a job. It helps users stay organized, focused, and on top of their job applications, which can lead to better job search results and a more successful job search experience."
+      ],
+      "images": [
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138237/job-hunter1_aubjts.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138253/job-hunter2_xjjm5p.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138307/job-hunter3_q1gozr.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138311/job-hunter4_fvwzsc.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138313/job-hunter5_ie5lx1.png",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687138314/job-hunter6_ezgmhy.jpg"
+      ],
+      "technologies": [
+        "ReactJS",
+        "Redux-Toolkit",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "SASS/SCSS",
+        "JavaScript",
+        "NodeJS",
+        "ExpressJS",
+        "SequelizeJS",
+        "PostgreSQL",
+        "Bcrypt",
+        "JWT"
+      ],
+      "video": null,
+      "github_url": "https://github.com/DF27ARTS/Jub-Hunter",
+      "live_url": "https://job-hunter-arkcl5zem-df27arts.vercel.app"
+    },
+    {
+      "id": 4,
+      "name": "Weather App",
+      "description": [
+        "The weather application is a tool that provides users with real-time weather information and forecasts. Users can access the weather application through a mobile device, computer or table",
+        "Users can choose to view the weather information for their current location or search for weather information in other locations. The application also allows users to save favorite locations for easy access to their preferred weather information.",
+        "Overall, the weather application is a useful tool for anyone who needs to stay up-to-date with current weather conditions and forecasts"
+      ],
+      "images": [
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687140042/weather_app_img5_k9x8og.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139953/weather_app_img3_lkdb1f.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139898/weather_app_img1_kbvdzy.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687139917/weather_app_img2_erqabp.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687140011/weather_app_img4_q6khok.webp",
+        "https://res.cloudinary.com/dcgbjtd2z/image/upload/v1687140074/weather_app_img6_ablbtq.webp"
+      ],
+      "technologies": [
+        "ReactJS",
+        "TypeScript",
+        "HTML",
+        "CSS"
+      ],
+      "video": null,
+      "github_url": "https://github.com/DF27ARTS/Weather_App",
+      "live_url": "https://weather-ifu7x3bji-df27arts.vercel.app"
+    }
+  ]
+}

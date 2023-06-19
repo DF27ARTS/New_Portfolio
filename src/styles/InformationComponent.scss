@@ -1,0 +1,25 @@
+
+@use "variables" as *;
+
+.information-slider {
+  width: var(--app-width);
+  min-height: calc(100vh - 5.8rem);
+
+  overflow-x: scroll;
+  overflow-x: scroll;
+
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+  grid-template-rows: 100%;
+  gap: 5%;
+
+  .projects-container,
+  .contact-container,
+  .tech-container,
+  .studies-container {
+    min-height: 100%;
+    width: 100%;
+    border-left: 2px solid hsl(0, 0%, 80%);
+    border-right: 2px solid hsl(0, 0%, 80%);
+  }
+}

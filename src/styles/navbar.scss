@@ -1,0 +1,180 @@
+@use "variables" as *;
+
+.navbar {
+
+  height: 20rem;
+  width: var(--app-width);
+  background: var(--primary-background-color);
+  border-radius: 1rem;
+
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  margin-bottom: 0;
+  z-index: 100;
+  
+  transition: 
+    height 750ms ease, 
+    width 750ms ease, 
+    border-radius 750ms ease, 
+    padding 750ms ease, 
+    margin-bottom 750ms ease;
+
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .nav-btn {
+    height: 100%;
+    flex-grow: 1;
+    border-radius: 1rem;
+    border: none;
+    background: 
+    transparent;
+    overflow: hidden;
+    
+    width: 0;
+
+    position: relative;
+    cursor: pointer;
+
+    transition: 
+      height 550ms ease, 
+      width 550ms ease, 
+      flex-grow 550ms ease;
+
+    &.active-nav-btn {
+      width: 8rem;
+
+      .lazy-loading-img img{
+        filter: grayscale(0);
+      }
+
+      .btn-name {
+        font-size: 2.2rem;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, var(--linear-gradient-background));
+      border-radius: inherit;
+      opacity: .15;
+    }
+
+    &:hover {
+      .lazy-loading-img img {
+        filter: grayscale(0) brightness(1);
+      }
+    }
+
+    &.projects { .lazy-loading-img { background-image: url("../assets/images/projects-img-small.png") } }
+    &.contact { .lazy-loading-img { background-image: url("../assets/images/contact-img-small.png") } }
+    &.tech { .lazy-loading-img { background-image: url("../assets/images/technology-img-small.png") } }
+    &.studies { .lazy-loading-img { background-image: url("../assets/images/studies-img-small.png") } }
+
+    .lazy-loading-img {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      z-index: -1;
+
+      opacity: 1;
+      transition: opacity 350ms ease;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      animation: loading-image 2s ease-in-out infinite;
+
+      @keyframes loading-image {
+        0% { opacity: 1; }
+        50% { opacity: .5; }
+        100% { opacity: 1; }
+      }
+
+      .loaded-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity ease 200ms;
+
+        transition: filter 150ms ease-out;
+        filter: grayscale(.9);
+
+        &.loaded {
+          opacity: 1;
+        }
+      }
+    }
+
+    .btn-name {
+      font-family: var(--font-family-text);
+      font-size: 1.3rem;
+      letter-spacing: .3rem;
+      color: var(--color-white);
+      font-weight: 700;
+      text-shadow: 0 0 1.5rem var(--color-black);
+
+      transition: font-size 550ms ease;
+    }
+  }
+
+  &.isIntersecting {
+    height: 5.5rem;
+    margin-bottom: 14.5rem;
+    border-radius: 0;
+
+    padding: 0 5rem;
+    
+    .nav-btn {
+      flex-grow: 0;
+      border-radius: 0;
+      width: fit-content;
+
+      &.active-nav-btn {
+        width: fit-content;
+
+        &::before {
+          opacity: 1;
+          width: 100%;
+        }
+        
+        .btn-name {
+          font-size: 1.1rem;
+        }
+      }
+      
+      &:before {
+        opacity: .5;
+        inset: auto 0 0 0; 
+        width: 0;
+        margin: auto;
+        height: .25rem;
+
+        transition: width 250ms ease;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+
+
+      .lazy-loading-img {
+        opacity: 0;
+      }
+    }
+
+    .btn-name {
+      font-size: 1.1rem;
+      text-shadow: none;
+    }
+  }
+}
