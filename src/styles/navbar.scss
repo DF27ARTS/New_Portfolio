@@ -26,6 +26,7 @@
   padding: 2rem;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
 
   .nav-btn {
     height: 100%;
@@ -35,6 +36,23 @@
     background: 
     transparent;
     overflow: hidden;
+
+    opacity: 0;
+    transform: translateX(40rem);
+
+    @for $i from 0 through 3 {
+      &:nth-child(#{$i + 1}) {
+        --navbar-animation-delay: #{calc(150ms * $i)};
+      }
+    }
+
+    animation: navbar_btn_onload_animation 500ms ease-out var(--navbar-animation-delay, 1ms) forwards;
+    @keyframes navbar_btn_onload_animation {
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
     
     width: 0;
 
