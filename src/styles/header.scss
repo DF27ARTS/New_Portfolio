@@ -124,6 +124,23 @@
         height: 3rem;
         width: min-content;
         font-size: 2rem;
+
+        position: relative;
+
+        &.typing::before {
+          position: absolute;
+          content: "";
+          height: 0%;
+          width: .1rem;
+          background: var(--text-color);
+
+          inset: 0 -.2rem 0 auto;
+          margin: auto;
+          animation: typing_animation 500ms ease infinite alternate;
+          @keyframes typing_animation {
+            100% { height: 80%; }
+          }
+        }
   
         font-family: var(--font-family-text);
 
