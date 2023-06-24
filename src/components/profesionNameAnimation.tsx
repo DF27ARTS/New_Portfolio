@@ -15,7 +15,7 @@ const ProfesionNameAnimation = () => {
     "Fullstack developer",
   ];
 
-  const profesionNames = useCallback((node: HTMLHeadingElement) => {
+  const profesionNames = useCallback(async (node: HTMLHeadingElement) => {
     if (node) {
       if (node.hasChildNodes()) {
         const childNodes = node.querySelectorAll(".profesion-single-letter");
@@ -78,55 +78,34 @@ const ProfesionNameAnimation = () => {
         });
       };
 
-      setTimeout(async () => {
-        for (const index in PersonalInformation) {
-          await new Promise(async (resolve) => {
-            const letters = PersonalInformation[index].split("");
-            if (Number(index) < PersonalInformation.length - 1) {
-              for (const index in letters) {
-                await createNewPromise(letters, Number(index));
+      await new Promise(async (resolve) => {
+        setTimeout(async () => {
+          for (const index in PersonalInformation) {
+            await new Promise(async (resolve) => {
+              const letters = PersonalInformation[index].split("");
+              if (Number(index) < PersonalInformation.length - 1) {
+                for (const index in letters) {
+                  await createNewPromise(letters, Number(index));
+                }
+              } else {
+                for (const index in letters) {
+                  await new Promise((innerResolve) => {
+                    setTimeout(() => {
+                      setLetter(letters[index]);
+                      innerResolve(true);
+                    }, delay);
+                  });
+                }
               }
-            } else {
-              for (const index in letters) {
-                await new Promise((innerResolve) => {
-                  setTimeout(() => {
-                    setLetter(letters[index]);
-                    innerResolve(true);
-                  }, delay);
-                });
-              }
-            }
 
-            resolve(true);
-          });
-        }
-        // .then(() => {
-        //   return new Promise(async (resolve) => {
-        //     const letters = PersonalInformation.Backend.split("");
-        //     for (const index in letters) {
-        //       await createNewPromise(letters, Number(index));
-        //     }
+              resolve(true);
+            });
+          }
 
-        //     resolve(true);
-        //   });
-        // })
-        // .then(() => {
-        //   return new Promise(async (resolve) => {
-        //     const letters = PersonalInformation.Fullstack.split("");
-        //     for (const index in letters) {
-        //       await new Promise((innerResolve) => {
-        //         setTimeout(() => {
-        //           setLetter(letters[index]);
-        //           innerResolve(true);
-        //         }, delay);
-        //       });
-        //     }
-
-        //     resolve(true);
-        //   });
-        // })
-        // .catch((error) => console.log(error));
-      }, 2000);
+          resolve(true);
+        }, 2000);
+      });
+      node.classList.remove("typing");
     }
   }, []);
 
@@ -139,7 +118,7 @@ const ProfesionNameAnimation = () => {
           </div>
         ))}
       </h1>
-      <h2 ref={profesionNames} className="profesion-title"></h2>
+      <h2 ref={profesionNames} className="profesion-title typing"></h2>
     </div>
   );
 };
